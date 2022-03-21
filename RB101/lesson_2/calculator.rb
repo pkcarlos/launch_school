@@ -3,7 +3,7 @@ def prompt(message)
 end
 
 def valid_number?(num)
-  num.to_i() != 0
+  num.to_i()
 end
 
 def operation_to_message(op)
@@ -43,7 +43,7 @@ loop do # main loop
     if valid_number?(number1)
       break
     else
-      prompt "Hmm... that doesn't like a valid number"
+      prompt "Hmm... that doesn't look like a valid number"
     end
   end
 
@@ -55,7 +55,7 @@ loop do # main loop
     if valid_number?(number2)
       break
     else
-      prompt "Hmm... that doesn't like a valid number"
+      prompt "Hmm... that doesn't look like a valid number"
     end
   end
 
