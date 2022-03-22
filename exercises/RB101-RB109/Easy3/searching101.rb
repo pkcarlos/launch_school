@@ -4,38 +4,56 @@ def prompt(message)
   puts "==> #{message}"
 end
 
+def valid_integer?(num)
+  num.to_i.to_s == num
+end
+
+def valid_float?(num)
+  num.to_f.to_s == num
+end
+
+def valid_number?(num)
+  valid_integer?(num) || valid_float?(num)
+end
+
 array_num = []
 
 prompt('Enter the 1st number:')
-first_num = gets.chomp.to_i
 
-# validate input
-first_num.integer? ? (puts "true") : (puts "false")
+number1 = ''
+loop do
+  number1 = gets.chomp
+  # validate input
+  if valid_number?(number1)
+    break
+  else
+    prompt("Please enter a valid number.")
+  end
+end
+array_num << number1
 
-# array_num << first_num
+prompt('Enter the 2nd number:')
+number2 = gets.chomp
+array_num << number2
 
-# prompt('Enter the 2nd number:')
-# second_num = gets.chomp.to_i
-# array_num << second_num
+prompt('Enter the 3rd number:')
+number3 = gets.chomp
+array_num << number3
 
-# prompt('Enter the 3rd number:')
-# third_num = gets.chomp.to_i
-# array_num << third_num
+prompt('Enter the 4th number:')
+number4 = gets.chomp
+array_num << number4
 
-# prompt('Enter the 4th number:')
-# fourth_num = gets.chomp.to_i
-# array_num << fourth_num
+prompt('Enter the 5th number:')
+number5 = gets.chomp
+array_num << number5
 
-# prompt('Enter the 5th number:')
-# fifth_num = gets.chomp.to_i
-# array_num << fifth_num
+prompt('Enter the last number:')
+last_num = gets.chomp
 
-# prompt('Enter the last number:')
-# last_num = gets.chomp.to_i
-
-# if array_num.any?(last_num)
-#   prompt("The number #{last_num} appears in #{array_num}.")
-# else
-#   prompt("The number #{last_num} does not appear in #{array_num}.")
-# end
+if array_num.include?(last_num)
+  prompt("The number #{last_num} appears in #{array_num}.")
+else
+  prompt("The number #{last_num} does not appear in #{array_num}.")
+end
 
