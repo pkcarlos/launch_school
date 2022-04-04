@@ -1,16 +1,18 @@
 # at each_index, if odd, push to array
-
 def oddities(array)
   array2 = []
   array.each_index do |num|
-    num.even? ? array2 << array.fetch : _
+    if num.even? 
+      array2 << array.fetch(num)
+    end
   end
 
-  b
+  p array2
 end
 
-puts oddities([2, 3, 4, 5, 6])
-puts oddities([1, 2, 3, 4, 5, 6])
-puts oddities(['abc', 'def'])
-puts oddities([123])
-puts oddities([])
+oddities([2, 3, 4, 5, 6])
+oddities([1, 2, 3, 4, 5, 6])
+oddities(['abc', 'def'])
+oddities([123])
+oddities([])
+
