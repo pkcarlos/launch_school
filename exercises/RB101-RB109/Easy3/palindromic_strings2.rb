@@ -6,8 +6,13 @@ end
 # remove non-alphanumerics (how?)
 # revert to string, then reverse
 def real_palindrome(obj)
-  
+  obj
 end
+
+
+
+
+
 
 
 (/[^0-9a-z]/i, '')  # regex

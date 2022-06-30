@@ -16,3 +16,6 @@ oddities(['abc', 'def'])
 oddities([123])
 oddities([])
 
+# further exploration
+
+
