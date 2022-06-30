@@ -70,7 +70,7 @@ end
 p fun_with_ids
 
 # Answer: 
-# "a_outer is 42 with an id of: #{a_outer_id} before the block." 
-# "b_outer is 'forty two" with an id of: #{b_outer_id} before the block." 
-# "c_outer is [42]] with an id of: #{c_outer_id} before the block." 
-# "d_outer is 42 with an id of: #{d_outer_id} before the block." 
+# "a_outer is 42 with an id of: 85 before the block." 
+# "b_outer is 'forty two' with an id of: 70264973818600 before the block." 
+# "c_outer is [42] with an id of: #{c_outer_id} before the block." 
+# "d_outer is 42 with an id of: #{d_outer_id} before the block." cxd
