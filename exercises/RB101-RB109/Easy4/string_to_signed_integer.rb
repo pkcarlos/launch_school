@@ -36,3 +36,13 @@ def string_to_integer(str)
   str_to_integer_arr.inject { |sum, num| sum * 10 + num }
 end 
 
+def string_to_signed_integer(str)
+  str.chars.first == '-' ? string_to_integer(str) * -1 : string_to_integer(str)
+end
+
+# There's an easier way to do this :)
+
+
+string_to_signed_integer('4321') == 4321
+string_to_signed_integer('-570') == -570
+string_to_signed_integer('+100') == 100
