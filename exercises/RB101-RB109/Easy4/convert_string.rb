@@ -50,3 +50,29 @@ p string_to_integer('4321') == 4321
 p string_to_integer('570') == 570
 
 # Solve using hash...
+
+# Input: string of digits
+# Output: integer of corresponding string of digits
+
+# Rules: Assume all characters numeric. You may not use any of the standard conversion methods.
+
+# Examples: 
+# string_to_integer('4321') == 4321
+# string_to_integer('570') == 570
+
+# Create a hash with string digits as keys and integers as values.
+# Given string of digits.
+# Isolate each digit in the string using String#split to return an array and save to variable arr_of_digits
+# Using the hash, replace each digit with its corresponding integer.
+  # Call #map on arr_of_digits and save result to arr_of_integers
+# Return integers. Call #join on arr_of_integers.
+
+NUMBERS = {'0' => 0, '1' => 1, '2' => 2, '3' => 3, '4' => 4, '5' => 5, '6' => 6, '7' => 7, '8' => 8, '9' => 9}
+
+def string_to_integer(string_digits)
+  arr_of_digits = string_digits.split('').map {|num| num = NUMBERS[num]}
+  arr_of_digits.join
+end
+
+p string_to_integer('4321') == 4321
+p string_to_integer('570') == 570
